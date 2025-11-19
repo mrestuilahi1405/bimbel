@@ -3,44 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0ea5e9" />
 
-    <title>
-      Bimbel Privat STIS - Diajar Peringkat 6 KS 63
-    </title>
+    <title>Bimbel Privat STIS - Diajar Peringkat 6 KS 63</title>
     <meta
       name="description"
-      content="Kesulitan matkul STIS? Bimbel privat Statmat, Anareg, Metstat, dll oleh Restu (Peringkat 6 KS 63). Nilai A terbukti. Ada paket patungan hemat & trial class."
+      content="Bimbel privat Statmat, Anareg, Metstat oleh Restu (Peringkat 6 KS 63). Nilai A terbukti."
     />
-    <meta
-      name="keywords"
-      content="bimbel stis, les privat statistika, tutor stis, restu ks 63, statistika matematika, analisis regresi, komputasi statistik"
-    />
-    <meta name="author" content="Restu Tutor" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      /* --- CSS VARIABLES (THEME) --- */
+      /* --- NEW BLUE SKY PALETTE --- */
       :root {
-        --bg-color: #fdfbf5; /* Cream Background */
-        --text-color: #4e342e; /* Dark Brown Text */
-        --primary-color: #8d6e63; /* Secondary/Accent Brown */
-        --dark-color: #3e2723; /* Darkest Brown (Hero/Footer) */
-        --white-color: #ffffff;
-        --border-color: #d7ccc8;
-        --highlight-bg: #efebe9;
-        --accent-color: #00796b; /* Teal (Main CTA) */
-        --accent-hover: #004d40; /* Darker Teal (Hover) */
-        --badge-bg: #e0f2f1; /* Badge Background */
-        --badge-text: #00695c; /* Badge Text */
+        /* Backgrounds */
+        --bg-body: #f0f9ff; /* Sky Blue sangat muda (Hampir putih) */
+        --bg-surface: #ffffff; /* Putih Murni */
+
+        /* Text Colors */
+        --text-main: #0c4a6e; /* Sky Blue Gelap (Hampir Navy) */
+        --text-muted: #475569; /* Cool Grey */
+
+        /* Brand Colors (Sky Blue & Royal Blue) */
+        --primary: #0284c7; /* Sky Blue cerah */
+        --primary-dark: #0369a1; /* Sky Blue lebih gelap */
+        --accent: #0ea5e9; /* Sky Blue Vivid */
+        --accent-light: #e0f2fe; /* Sky Blue sangat muda untuk badge/bg icon */
+
+        /* Gradient khusus Hero */
+        --gradient-brand: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+
+        /* Functional Colors */
+        --success: #10b981; /* Emerald (Nilai A) */
+        --success-bg: #ecfdf5;
+        --warning: #f59e0b; /* Amber */
+        --warning-bg: #fffbeb;
+        --danger: #ef4444;
+        --danger-bg: #fef2f2;
+
+        /* Borders & Shadows */
+        --border-light: #e2e8f0; /* Slate Grey sangat muda */
+
+        --shadow-sm: 0 1px 3px rgba(14, 165, 233, 0.1),
+          0 1px 2px rgba(14, 165, 233, 0.06);
+        --shadow-md: 0 4px 6px -1px rgba(14, 165, 233, 0.1),
+          0 2px 4px -1px rgba(14, 165, 233, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(14, 165, 233, 0.1),
+          0 4px 6px -2px rgba(14, 165, 233, 0.05);
+        --shadow-glow: 0 20px 25px -5px rgba(59, 130, 246, 0.2),
+          0 10px 10px -5px rgba(59, 130, 246, 0.1);
+
+        --radius-md: 16px;
+        --radius-lg: 24px;
       }
 
-      /* --- RESET & BASE STYLES --- */
+      /* --- RESET & BASE --- */
       * {
         box-sizing: border-box;
         margin: 0;
@@ -48,733 +70,1166 @@
       }
       html {
         scroll-behavior: smooth;
+        font-size: 16px;
       }
+
       body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        padding-top: 80px; /* Space for Sticky Nav */
-      }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 60px 20px;
-      }
-      section {
-        margin-bottom: 60px;
+        font-family: "Manrope", sans-serif;
+        line-height: 1.7;
+        background-color: var(--bg-body);
+        color: var(--text-main);
+        overflow-x: hidden;
       }
 
       /* --- TYPOGRAPHY --- */
       h1,
       h2,
       h3,
-      h4,
-      .logo {
-        font-family: "Montserrat", sans-serif;
-        line-height: 1.2;
-        font-weight: 800;
-        margin-bottom: 20px;
-      }
-      h1 {
-        font-size: 2.8rem;
-        color: var(--white-color);
-      }
-      h2 {
-        font-size: 2.2rem;
-        text-align: center;
-        color: var(--dark-color);
-      }
-      h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
       h4 {
-        font-size: 1.2rem;
-        color: var(--primary-color);
-        font-weight: 700;
+        font-family: "Manrope", sans-serif;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--text-main);
+        margin-bottom: 1.5rem;
       }
       p {
-        margin-bottom: 15px;
-        color: #5d4037;
+        margin-bottom: 1.5rem;
+        color: var(--text-muted);
+        font-size: 1.05rem;
       }
 
-      /* --- UI COMPONENTS --- */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      section {
+        padding: 100px 0;
+      } /* Lebih lega */
       .text-center {
         text-align: center;
       }
 
-      /* Lists with Icons */
-      ul {
-        list-style: none;
-      }
-      ul.checklist li {
+      /* --- HERO SECTION (FRESH BLUE) --- */
+      .hero {
+        background: var(--gradient-brand);
+        color: #fff;
+        padding: 140px 24px 120px;
+        border-radius: 0 0 60px 60px;
+        text-align: center;
         position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        font-size: 1.05rem;
-      }
-      ul.checklist li svg {
-        position: absolute;
-        left: 0;
-        top: 4px;
-        width: 24px;
-        height: 24px;
-        fill: var(--accent-color);
+        overflow: hidden;
       }
 
-      /* Buttons (CTA) */
-      .cta-button,
-      .cta-button-secondary,
-      .nav-cta {
+      /* Pattern Background (Awan/Langit Abstrak) */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.15) 2px,
+          transparent 2px
+        );
+        background-size: 40px 40px;
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      /* Glowing Orbs Effect (Matahari/Cahaya) */
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: -60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 900px;
+        height: 900px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.2) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        color: #fff;
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+      }
+
+      .hero h1 span {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        color: #bae6fd; /* Light Sky Blue for contrast */
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.2rem;
+        max-width: 650px;
+        margin: 0 auto 48px;
+        font-weight: 500;
+      }
+
+      /* Tombol Hero */
+      .btn-hero {
+        background: #fff;
+        color: var(--primary);
+        padding: 18px 40px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        font-weight: 800;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+      .btn-hero:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        background: #f0f9ff;
+      }
+      .btn-hero svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        fill: currentColor;
+      }
+
+      /* Trust Stars */
+      .hero-trust {
+        margin-top: 40px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+      .stars {
+        display: flex;
+        gap: 4px;
+      }
+      .stars svg {
+        width: 18px;
+        height: 18px;
+        fill: #fde047;
+      } /* Kuning Cerah */
+
+      /* --- BUTTONS --- */
+      .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 15px 30px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1rem;
+        padding: 14px 28px;
         border-radius: 50px;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.3s ease;
         cursor: pointer;
         border: 2px solid transparent;
       }
-      .cta-button,
-      .nav-cta {
-        background-color: var(--accent-color);
-        color: var(--white-color);
-        box-shadow: 0 4px 15px rgba(0, 121, 107, 0.25);
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        box-shadow: var(--shadow-md);
       }
-      .cta-button:hover,
-      .nav-cta:hover {
-        background-color: var(--accent-hover);
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        box-shadow: var(--shadow-glow);
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 121, 107, 0.35);
       }
-      .cta-button-secondary {
-        background-color: transparent;
-        color: var(--accent-color);
-        border-color: var(--accent-color);
+      .btn-outline {
+        background: transparent;
+        border-color: var(--primary);
+        color: var(--primary);
       }
-      .cta-button-secondary:hover {
-        background-color: #e0f2f1;
+      .btn-outline:hover {
+        background: var(--primary);
+        color: #fff;
       }
-
-      /* Icon sizing in buttons */
-      .cta-button svg,
-      .nav-cta svg {
-        width: 1.2em;
-        height: 1.2em;
+      .btn svg {
+        width: 20px;
+        height: 20px;
         margin-right: 8px;
         fill: currentColor;
       }
 
-      /* --- LAYOUT SECTIONS --- */
-
-      /* Sticky Navbar */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px); /* Modern Glass Effect */
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 5%;
+      /* --- CARDS (Glassy & Clean) --- */
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
       }
-      .navbar .logo {
-        font-size: 1.4rem;
-        color: var(--dark-color);
-        margin: 0;
+      .feature-card {
+        background: var(--bg-surface);
+        padding: 40px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-light);
+        transition: all 0.3s ease;
       }
-      .nav-cta {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-glow);
+        border-color: var(--accent);
       }
 
-      /* Hero Section */
-      .hero {
-        background-color: var(--dark-color);
-        text-align: center;
-        padding: 80px 20px 100px 20px;
-        /* Subtle Pattern Background could be added here */
-      }
-      .hero h3 {
-        font-size: 1.3rem;
-        font-weight: 400;
-        color: #d7ccc8;
-        margin-bottom: 30px;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero .cta-button {
-        background-color: var(--white-color);
-        color: var(--accent-color);
-      }
-      .hero .cta-button:hover {
-        background-color: #f5f5f5;
-      }
-
-      /* Cards (Pricing, CTA Options) */
-      .card-container {
-        display: flex;
-        gap: 25px;
-        margin-top: 30px;
-      }
-      .card {
-        flex: 1;
-        background: var(--white-color);
-        border: 1px solid var(--border-color);
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        background: var(--accent-light);
+        color: var(--primary);
         border-radius: 16px;
-        padding: 30px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
       }
-      .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      }
-      .card.highlight {
-        border: 2px solid var(--accent-color);
-        background: #fdfeff;
-        position: relative;
-      }
-      .card.highlight::before {
-        content: "POPULAR";
-        position: absolute;
-        top: -12px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--accent-color);
-        color: white;
-        padding: 4px 12px;
-        font-size: 0.75rem;
-        font-weight: 800;
-        border-radius: 20px;
-      }
-      .price {
-        font-size: 2.2rem;
-        font-weight: 800;
-        color: var(--accent-color);
-        line-height: 1;
-        margin: 15px 0;
-      }
-      .price span {
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--text-color);
+      .feature-icon svg {
+        width: 28px;
+        height: 28px;
+        fill: currentColor;
       }
 
-      /* Transcript Table (Responsive & Clean) */
-      .transcript-box {
-        margin-top: 30px;
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
+      /* --- TRANSCRIPT (Clean & Pro) --- */
+      details.transcript-box {
+        background: var(--bg-surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-light);
         overflow: hidden;
-        background: var(--white-color);
+        margin-top: 64px;
+        box-shadow: var(--shadow-md);
       }
-      .transcript-box summary {
-        padding: 15px 20px;
+      details.transcript-box summary {
+        padding: 24px 32px;
         font-weight: 700;
+        font-size: 1.1rem;
         cursor: pointer;
-        color: var(--dark-color);
-        background-color: #fafafa;
+        list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        list-style: none;
-        transition: background 0.2s;
+        background: #fff;
+        color: var(--text-main);
+        transition: 0.2s;
       }
-      .transcript-box summary:hover {
-        background-color: #f0f0f0;
+      details.transcript-box summary:hover {
+        background: #f0f9ff;
+        color: var(--primary);
       }
-      .transcript-box summary::after {
+      details.transcript-box summary::after {
         content: "+";
         font-size: 1.5rem;
+        color: var(--primary);
         font-weight: 300;
       }
-      .transcript-box[open] summary::after {
+      details.transcript-box[open] summary::after {
         content: "−";
       }
 
-      .table-wrapper {
+      /* Table */
+      .table-container {
+        width: 100%;
         overflow-x: auto;
-      } /* Horizontal scroll on mobile */
-      table.grade-table {
+        background: #fff;
+      }
+      table {
         width: 100%;
         border-collapse: collapse;
-        font-size: 0.95rem;
-        min-width: 350px;
+        min-width: 600px;
       }
-      table.grade-table th {
+      th {
         text-align: left;
-        padding: 12px 20px;
-        background-color: var(--primary-color);
-        color: white;
-        font-size: 0.9rem;
+        padding: 20px 32px;
+        background: #f0f9ff;
+        border-bottom: 1px solid var(--border-light);
+        color: var(--text-muted);
+        font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-weight: 700;
       }
-      table.grade-table td {
-        padding: 12px 20px;
-        border-bottom: 1px solid #eee;
+      td {
+        padding: 18px 32px;
+        border-bottom: 1px solid var(--border-light);
+        font-weight: 600;
+        color: var(--text-main);
       }
-      table.grade-table tr:last-child td {
+      tr:last-child td {
         border-bottom: none;
       }
-      table.grade-table tr:hover {
-        background-color: #fafafa;
+      tbody tr:hover {
+        background: #f0f9ff;
       }
 
-      /* Badge Nilai */
-      .grade-badge {
-        display: inline-block;
-        background-color: var(--badge-bg);
-        color: var(--badge-text);
-        padding: 4px 10px;
-        border-radius: 6px;
+      /* Score Styles */
+      .score-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .score-val {
+        font-family: "Manrope", monospace;
         font-weight: 800;
-        font-size: 0.85rem;
-        margin-left: 8px;
+        width: 70px;
+        text-align: right;
+        margin-right: 20px;
+        font-variant-numeric: tabular-nums;
+      }
+      .grade-badge {
+        background: var(--success-bg);
+        color: var(--success);
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-weight: 800;
+        font-size: 0.9rem;
       }
       .grade-badge.warning {
-        background-color: #fff3e0;
-        color: #e65100;
+        background: var(--warning-bg);
+        color: var(--warning);
       }
 
-      /* Sections specific styling */
-      #solusi,
-      #mengapa,
-      #cta-final {
-        background: var(--white-color);
-        padding: 50px 40px;
+      /* --- PRICING --- */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+      }
+      .pricing-card {
+        background: var(--bg-surface);
+        border-radius: var(--radius-lg);
+        padding: 40px 32px;
+        border: 1px solid var(--border-light);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: 0.3s;
+      }
+      .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-glow);
+        border-color: var(--accent);
+      }
+
+      /* Text Alignment Pricing */
+      .pricing-card h4,
+      .price-large,
+      .badge-center {
+        text-align: center;
+      }
+      .pricing-card p {
+        text-align: justify;
+      }
+      .pricing-card .btn,
+      .pricing-card .btn-outline,
+      .pricing-card .btn-accent {
+        margin-top: auto !important;
+        width: 100%;
+      }
+
+      .pricing-card.featured {
+        border: 2px solid var(--accent);
+        background: linear-gradient(to bottom, #fff, #e0f2fe);
+        position: relative;
+      }
+      .pricing-card.featured::before {
+        content: "🔥 PALING HEMAT";
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--accent);
+        color: #fff;
+        padding: 6px 16px;
         border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+        font-size: 0.75rem;
+        font-weight: 800;
       }
-      #mengapa {
-        background-color: var(--highlight-bg);
-      }
-      #matkul ul {
-        columns: 2;
+      .price-large {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin: 16px 0;
+        line-height: 1;
       }
 
-      /* FAQ */
-      details.faq-item {
-        background: var(--white-color);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        margin-bottom: 15px;
+      /* Checklists */
+      .checklist {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 20px;
       }
-      details.faq-item summary {
-        padding: 20px;
+      .checklist li {
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        text-align: justify;
+        font-weight: 500;
+      }
+      .checklist li svg {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        fill: var(--success);
+      }
+
+      /* --- MATKUL (Card Style) --- */
+      .matkul-card {
+        background: #fff;
+        border-radius: var(--radius-lg);
+        padding: 48px;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-light);
+      }
+      .matkul-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px 48px;
+        list-style: none;
+      }
+      .matkul-item {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        padding-bottom: 16px;
+        border-bottom: 1px dashed var(--border-light);
+        color: var(--text-main);
+      }
+      .matkul-item svg {
+        width: 24px;
+        height: 24px;
+        fill: var(--primary);
+        background: var(--accent-light);
+        border-radius: 50%;
+        padding: 4px;
+        margin-right: 12px;
+        flex-shrink: 0;
+      }
+
+      /* --- FAQ SECTION (REVISED: MODERN & FRIENDLY) --- */
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px; /* Jarak antar pertanyaan */
+      }
+
+      .faq-item {
+        background: #ffffff;
+        border: 1px solid var(--border-light);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-sm);
+      }
+
+      /* Efek hover biar interaktif */
+      .faq-item:hover {
+        box-shadow: var(--shadow-md);
+        border-color: var(--accent);
+      }
+
+      .faq-item summary {
+        padding: 20px 24px;
         font-weight: 700;
+        font-size: 1.05rem;
         cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-main);
+        background-color: #fff;
+        transition: background-color 0.2s;
       }
-      details.faq-item div {
-        padding: 0 20px 20px;
-        color: #666;
+
+      /* Menghilangkan panah default browser */
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      /* Ikon Panah Custom di Kanan */
+      .faq-item summary::after {
+        content: "+";
+        font-size: 1.5rem;
+        color: var(--primary);
+        font-weight: 300;
+        transition: transform 0.3s ease;
+        line-height: 1;
+      }
+
+      /* Saat dibuka */
+      .faq-item[open] summary {
+        background-color: #f8fafc; /* Warna background sedikit berubah saat dibuka */
+        color: var(--primary);
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      .faq-item[open] summary::after {
+        content: "−";
+        transform: rotate(180deg);
+      }
+
+      .faq-item div {
+        padding: 20px 24px;
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left; /* Lebih enak dibaca rata kiri untuk teks panjang */
       }
 
       /* Footer */
       footer {
+        background: #fff;
+        padding: 60px 0 40px;
         text-align: center;
-        padding: 40px 20px;
-        border-top: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-light);
         font-size: 0.9rem;
-        color: #888;
-        margin-top: 60px;
+        margin-top: 80px;
       }
 
-      /* --- MOBILE RESPONSIVE --- */
       @media (max-width: 768px) {
-        body {
-          padding-top: 70px;
+        .hero {
+          padding: 100px 20px 80px;
+          border-radius: 0 0 40px 40px;
         }
-        .container {
-          padding: 40px 20px;
+        .matkul-card {
+          padding: 32px 20px;
         }
-        .hero h1 {
-          font-size: 2rem;
+        .matkul-grid {
+          grid-template-columns: 1fr;
         }
-        .navbar .logo {
-          font-size: 1.1rem;
-        }
-        .nav-cta {
-          padding: 8px 15px;
-          font-size: 0.8rem;
-        }
-        .card-container {
-          flex-direction: column;
-        }
-        #matkul ul {
-          columns: 1;
-        }
-        #solusi,
-        #mengapa,
-        #cta-final {
-          padding: 30px 20px;
+        section {
+          padding: 60px 0;
         }
       }
     </style>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="icon-whatsapp" viewBox="0 0 24 24">
-        <path
-          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.847 6.039l-.31 1.141-1.165 4.289 4.39-.941.314 1.188z"
-        />
-      </symbol>
       <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+      </symbol>
+      <symbol id="icon-wa" viewBox="0 0 24 24">
         <path
-          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+          d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.05 20.21c-1.5 0-2.97-.38-4.28-1.1l-.3-.17-3.13.82.83-3.05-.2-.32a8.188 8.188 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.19-8.13 8.19z"
         />
       </symbol>
     </svg>
   </head>
   <body>
-
     <header class="hero">
-      <h1>Statmat, Anareg, Metstat, dll ... Udah Belajar, Kok Gak Nempel Juga?</h1>
-      <h3>
-        Tumpukan PR, kuis dadakan, dan UAS bikin cemas? Tenang, kamu gak
-        sendirian. Ada solusinya.
-      </h3>
-      <a href="#solusi" class="cta-button">
-        <svg><use href="#icon-check" /></svg> LIHAT SOLUSINYA
-      </a>
+      <div class="hero-content">
+        <div class="hero-badge">✨ Slot Terbatas Bulan Ini</div>
+
+        <h1>
+          Statmat, Anreg, Basdat?<br />
+          <span>Request Matkul Apa Aja.</span>
+        </h1>
+
+        <p>
+          Bingung materi kuliah? Dari yang paling "momok" sampai materi spesifik
+          pilihanmu (Basdat, Komstat, dll), kita bahas tuntas bareng Restu
+          (Peringkat 6 KS 63). Bebas tentukan materi sendiri!
+        </p>
+
+        <div>
+          <a href="#solusi" class="btn-hero">
+            LIHAT SOLUSINYA
+            <svg viewBox="0 0 24 24" style="margin-left: 8px; margin-right: 0">
+              <path
+                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="stars">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </div>
+          <span>Dipercaya oleh Mahasiswa KS</span>
+        </div>
+      </div>
     </header>
 
-    <main class="container">
+    <main>
       <section id="solusi">
-        <div class="text-center">
-          <h2>Solusi Belajar Terbukti: Diajar Langsung Ahlinya</h2>
-          <p style="font-size: 1.1rem; margin-bottom: 30px">
-            Bimbel privat eksklusif kurikulum STIS. Diajar oleh kakak tingkat
-            yang sudah membuktikan bahwa matkul "momok" bisa ditaklukkan dengan
-            nilai A.
-          </p>
-        </div>
-
-        <h4>Diajar oleh: Restu (Peringkat 6 Besar KS 63)</h4>
-        <ul class="checklist">
-          <li>
-            <svg><use href="#icon-check" /></svg
-            ><strong>Lulusan KS 63</strong> yang paham betul celah kurikulum dan
-            tipe soal dosen.
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg
-            ><strong>Metode Ngajar:</strong> Fokus pemahaman konsep intuitif,
-            bukan cuma hafal rumus buta.
-          </li>
-        </ul>
-
-        <details class="transcript-box" open>
-          <summary>🏆 Bukti Kompetensi: Lihat Transkrip Nilai Saya</summary>
-          <div class="table-wrapper">
-            <table class="grade-table">
-              <thead>
-                <tr>
-                  <th>Mata Kuliah</th>
-                  <th style="width: 140px">Nilai Akhir</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Statistika Matematika I</td>
-                  <td>
-                    <strong>94.60 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Statistika Matematika II</td>
-                  <td>
-                    <strong>88.70 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Metode Statistika I</td>
-                  <td>
-                    <strong>89.90 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Analisis Regresi</td>
-                  <td>
-                    <strong>90.00 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Komputasi Statistik</td>
-                  <td>
-                    <strong>87.10 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Kalkulus</td>
-                  <td>
-                    <strong>87.10 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Aljabar Linier</td>
-                  <td>
-                    <strong>88.30 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Basis Data</td>
-                  <td>
-                    <strong>89.50 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Analisis Data Eksploratif</td>
-                  <td>
-                    <strong>85.60 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Algoritma dan Pemrograman</td>
-                  <td>
-                    <strong>88.90 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Struktur Data</td>
-                  <td>
-                    <strong>89.60 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Pemrograman Berbasis Web</td>
-                  <td>
-                    <strong>90.30 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Pemrograman Berorientasi Objek</td>
-                  <td>
-                    <strong>88.80 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Metode Numerik</td>
-                  <td>
-                    <strong>91.10 <span class="grade-badge">A</span></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Matematika Diskrit</td>
-                  <td>
-                    <strong>83.70 <span class="grade-badge">A-</span></strong>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
-
-        <div
-          style="
-            margin-top: 50px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 30px;
-          "
-        >
-          <h3>Kenapa Sistem Ini *Worth It* Untuk Kamu?</h3>
-          <ul class="checklist">
-            <li>
-              <svg><use href="#icon-check" /></svg
-              ><strong>Bebas Tentukan Materi:</strong> Bahas PR, ulang konsep,
-              atau persiapan UTS/UAS.
-            </li>
-            <li>
-              <svg><use href="#icon-check" /></svg
-              ><strong>Sangat Fleksibel:</strong> Atur jadwal sesukamu, bisa
-              malam atau weekend.
-            </li>
-            <li>
-              <svg><use href="#icon-check" /></svg
-              ><strong>Tanpa Komitmen:</strong> Bisa ambil 1 sesi saja kalau
-              kepepet ("Ketengan").
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="penawaran">
-        <h2>Pilih Paket Sesuai Budget</h2>
-        <div class="card-container">
-          <div class="card">
-            <h3>1. PRIVAT (1-on-1)</h3>
-            <p class="price">80K <span>/ sesi</span></p>
-            <p style="font-size: 0.9rem">(Durasi 90 Menit)</p>
+        <div class="container">
+          <div
+            class="text-center"
+            style="max-width: 700px; margin: 0 auto 60px"
+          >
+            <h2>Belajar Langsung dari Ahlinya</h2>
             <p>
-              Fokus 100% materi kamu. Privasi terjaga, bebas tanya hal paling
-              dasar sekalipun.
+              Bimbel ini didesain khusus untuk kurikulum STIS. Diajar oleh
+              alumni yang terbukti berprestasi.
             </p>
           </div>
 
-          <div class="card highlight">
-            <h3>2. PATUNGAN (HEMAT)</h3>
-            <p class="price">100K <span>/ sesi</span></p>
-            <p style="font-size: 0.9rem">(Total harga untuk maks 5 orang)</p>
-            <p>
-              <strong>HANYA 20K/ORANG!*</strong><br /><span
-                style="font-size: 0.8rem"
-                >*Jika ajak 4 teman</span
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                  />
+                </svg>
+              </div>
+              <h4>Peringkat 6 Besar</h4>
+              <p style="margin-bottom: 0; text-align: justify">
+                Lulusan KS 63 dengan reputasi akademik tervalidasi. Paham celah
+                setiap soal.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"
+                  />
+                </svg>
+              </div>
+              <h4>Metode Intuitif</h4>
+              <p style="margin-bottom: 0; text-align: justify">
+                Anti-hafalan buta. Kita bedah konsep sampai akar, soal diubah
+                pun tetap bisa.
+              </p>
+            </div>
+          </div>
+
+          <details class="transcript-box" open>
+            <summary>🏆 Lihat Bukti Transkrip Nilai (Asli)</summary>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Mata Kuliah</th>
+                    <th style="width: 180px">Nilai Akhir</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Statistika Matematika I</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">94.60</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Statistika Matematika II</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">88.70</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Analisis Regresi</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">90.00</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Metode Statistika I</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">89.90</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Metode Statistika II</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">75.50</span
+                        ><span class="grade-badge warning">B+</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Komputasi Statistik</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">87.10</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Algoritma dan Pemrograman</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">88.90</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Struktur Data</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">89.60</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pemrograman Berbasis Web</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">90.30</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Pemrograman Berorientasi Objek</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">88.80</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Basis Data</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">89.50</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Kalkulus</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">87.10</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Aljabar Linier</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">88.30</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Metode Numerik</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">91.10</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Analisis Data Eksploratif</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">85.60</span
+                        ><span class="grade-badge">A</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Matematika Diskrit</td>
+                    <td>
+                      <div class="score-wrapper">
+                        <span class="score-val">83.70</span
+                        ><span class="grade-badge">A-</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="penawaran-utama" style="background: #fff">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 40px">
+            <h2>Pilihan Paket Belajar</h2>
+            <p>Amankan nilai terbaikmu semester ini.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <div>
+                <h4 style="color: var(--text-muted); font-size: 1rem">
+                  TRIAL CLASS
+                </h4>
+                <div class="price-large">40K</div>
+                <p>
+                  Coba 1 sesi privat (90 menit). Tidak cocok? Tidak perlu
+                  lanjut.
+                </p>
+                <span
+                  style="
+                    background: var(--danger-bg);
+                    color: var(--danger);
+                    padding: 4px 10px;
+                    border-radius: 6px;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                  "
+                  class="badge-center"
+                  >*Khusus 1 Orang</span
+                >
+              </div>
+              <a
+                href="https://wa.me/6281275160650?text=Halo, mau daftar Trial Class 40K"
+                class="btn btn-outline"
+                style="margin-top: 30px"
+                >Ambil Trial</a
               >
-            </p>
+            </div>
+
+            <div class="pricing-card">
+              <div>
+                <h4 style="color: var(--text-muted); font-size: 1rem">
+                  PRIVAT (1-ON-1)
+                </h4>
+                <div class="price-large">80K</div>
+                <p>
+                  Fokus 100% ke kamu. Bebas tanya hal dasar. Materi custom
+                  sesuai request.
+                </p>
+                <ul class="checklist" style="margin-top: 20px">
+                  <li>
+                    <svg><use href="#icon-check" /></svg
+                    ><span>Jadwal Fleksibel</span>
+                  </li>
+                  <li>
+                    <svg><use href="#icon-check" /></svg
+                    ><span>Privasi Terjaga</span>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://wa.me/6281275160650?text=Halo, mau booking Privat"
+                class="btn btn-outline"
+                style="margin-top: 30px"
+                >Booking Privat</a
+              >
+            </div>
+
+            <div class="pricing-card featured">
+              <div>
+                <h4
+                  style="
+                    color: var(--accent);
+                    font-size: 1rem;
+                    margin-bottom: 16px;
+                  "
+                >
+                  PAKET KELOMPOK
+                </h4>
+
+                <div
+                  class="price-large"
+                  style="color: var(--primary); margin-bottom: 8px"
+                >
+                  100K
+                  <span
+                    style="
+                      font-size: 1rem;
+                      font-weight: 500;
+                      color: var(--text-muted);
+                    "
+                  >
+                    /sesi
+                  </span>
+                </div>
+
+                <p
+                  style="
+                    text-align: center;
+                    margin-bottom: 24px;
+                    font-size: 0.95rem;
+                    color: var(--text-muted);
+                  "
+                >
+                  (Maksimal 5 Orang)
+                </p>
+
+                <div
+                  style="
+                    background: var(--success-bg);
+                    border: 1px solid var(--success);
+                    color: var(--success);
+                    padding: 16px; /* Lebih lega dalamnya */
+                    border-radius: 12px;
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 0.95rem;
+                    margin-bottom: 32px; /* Jarak ke teks bawah diperjauh */
+                    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.1);
+                  "
+                >
+                  ✨ Patungan ber-5 = Cuma 20K/org!
+                </div>
+
+                <p
+                  style="
+                    text-align: justify;
+                    margin-bottom: 32px;
+                    line-height: 1.8;
+                  "
+                >
+                  Ajak teman satu circle-mu! Biaya 100K dibagi rata dengan teman
+                  kelompokmu. Lebih hemat, belajar lebih seru.
+                </p>
+
+                <details
+                  style="
+                    margin-top: 0;
+                    border-top: 1px dashed var(--accent);
+                    padding-top: 24px; /* Jarak dari garis ke teks */
+                    padding-bottom: 10px;
+                    cursor: pointer;
+                  "
+                >
+                  <summary
+                    style="
+                      font-weight: 700;
+                      color: var(--accent);
+                      list-style: none;
+                      text-align: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    💡 Kenapa Belajar Kelompok?
+                  </summary>
+
+                  <ul class="checklist" style="margin-top: 20px">
+                    <li>
+                      <svg><use href="#icon-check" /></svg>
+                      <span style="text-align: justify; display: block">
+                        <strong>Gak Canggung:</strong> Lebih rileks karena
+                        belajar bareng teman sendiri.
+                      </span>
+                    </li>
+                    <li>
+                      <svg><use href="#icon-check" /></svg>
+                      <span style="text-align: justify; display: block">
+                        <strong>Tetap Fokus:</strong> Maksimal 5 orang, jadi
+                        tidak seramai kelas besar.
+                      </span>
+                    </li>
+                    <li>
+                      <svg><use href="#icon-check" /></svg>
+                      <span style="text-align: justify; display: block">
+                        <strong>Diskusi Hidup:</strong> Bisa saling koreksi dan
+                        sharing pemahaman.
+                      </span>
+                    </li>
+                  </ul>
+                </details>
+              </div>
+
+              <a
+                href="https://wa.me/6281275160650?text=Halo Kak Restu, saya mau booking Paket Kelompok (100K)!"
+                class="btn btn-primary"
+                style="margin-top: 30px; width: 100%"
+              >
+                <svg><use href="#icon-wa" /></svg> Booking Kelompok
+              </a>
+            </div>
           </div>
         </div>
-      </section>
-
-      <section id="mengapa">
-        <h2>Kenapa Patungan (5 Orang) Itu Ideal?</h2>
-        <ul class="checklist">
-          <li>
-            <svg><use href="#icon-check" /></svg
-            ><strong>Gak Canggung:</strong> Suasana lebih rileks dibanding
-            1-on-1.
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg
-            ><strong>Fokus Terjaga:</strong> Tidak terlalu ramai seperti kelas
-            besar/zoom angkatan.
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg
-            ><strong>Diskusi Hidup:</strong> Saling sharing pemahaman dengan
-            teman satu circle.
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg
-            ><strong>Super Hemat:</strong> Ilmu maksimal seharga jajan bakso!
-          </li>
-        </ul>
       </section>
 
       <section id="matkul">
-        <h2 style="margin-bottom: 30px">Mata Kuliah yang Diampu</h2>
-        <ul class="checklist">
-          <li>
-            <svg><use href="#icon-check" /></svg>Kalkulus
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg>Metode Statistika I & II
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg>Statistika Matematika I & II
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg>Analisis Regresi
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg>Komputasi Statistik
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg>Basis Data
-          </li>
-          <li>
-            <svg><use href="#icon-check" /></svg>dan Lainnya (Silakan request)
-          </li>
-        </ul>
-      </section>
-
-      <section id="cta-final">
-        <h2>Ambil Langkah Pertama Sekarang</h2>
-        <p class="text-center">
-          Jangan tunggu sampai H-1 ujian. Amankan IPK kamu dari sekarang.
-        </p>
-
-        <div class="card-container">
-          <div class="card">
-            <h4>OPSI 1: TRIAL CLASS (RISIKO 0%)</h4>
-            <p class="price" style="font-size: 1.8rem">CUMA 40K</p>
-            <p>Coba 1 sesi privat. Gak cocok? Gak usah lanjut.</p>
-            <p
-              style="
-                font-size: 0.8rem;
-                color: #d32f2f;
-                background: #ffebee;
-                padding: 5px;
-                border-radius: 4px;
-              "
-            >
-              *Khusus 1 orang (Privat)
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 40px">
+            <h2>Mata Kuliah yang Diampu</h2>
+            <p style="text-align: center">
+              Semua materi Statistik & Komputasi siap dibabat habis.
             </p>
-
-            <a
-              href="https://wa.me/6281275160650?text=Halo Kak Restu, mau daftar Trial Class 40K!"
-              class="cta-button-secondary"
-              style="width: 100%; margin-top: 15px"
-            >
-              Daftar Trial
-            </a>
           </div>
 
-          <div class="card highlight" style="border-color: var(--accent-color)">
-            <h4>OPSI 2: KELAS REGULER</h4>
-            <p class="price" style="font-size: 1.8rem">Mulai 20K/org</p>
-            <p>Langsung booking slot Privat atau Patungan bareng teman.</p>
-
-            <a
-              href="https://wa.me/6281275160650?text=Halo Kak Restu, mau booking jadwal reguler!"
-              class="cta-button"
-              style="width: 100%; margin-top: 15px"
-            >
-              <svg><use href="#icon-whatsapp" /></svg> Booking Jadwal
-            </a>
+          <div class="matkul-card">
+            <ul class="matkul-grid">
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Kalkulus
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Metode Statistika I & II
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Statistika Matematika I &
+                II
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Analisis Regresi
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Komputasi Statistik
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Basis Data
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Analisis Data Eksploratif
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Algoritma & Pemrograman
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Metode Numerik
+              </li>
+              <li class="matkul-item">
+                <svg><use href="#icon-check" /></svg>Dan Lainnya (Request Aja!)
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section id="faq">
-        <h2>Tanya Jawab Umum (FAQ)</h2>
+      <section id="faq" style="background: #fff">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: 40px">
+            <h2>Tanya Jawab (FAQ)</h2>
+            <p>
+              Masih bingung? Santai, cek jawaban dari pertanyaan yang sering
+              muncul ini.
+            </p>
+          </div>
 
-        <details class="faq-item">
-          <summary>Bisa request matkul lain?</summary>
-          <div>
-            Bisa, selama masih dalam lingkup Statistika & Komputasi dan saya
-            menguasainya. Chat aja dulu untuk tanya.
-          </div>
-        </details>
+          <div class="faq-container">
+            <details class="faq-item">
+              <summary>📚 Materinya bahas apa aja, Kak?</summary>
+              <div>
+                <strong>Bebas request sesuka hati!</strong> <br />
+                Kamu butuh bantuan buat ngerjain PR? Persiapan kuis dadakan?
+                Atau mau review materi UTS/UAS biar makin paham? Kita bahas
+                sesuai kebutuhan kamu saat itu. Gak kaku harus ikut silabus kok.
+              </div>
+            </details>
 
-        <details class="faq-item">
-          <summary>Jam belajarnya gimana?</summary>
-          <div>
-            Fleksibel sesuai <strong>kebutuhanmu</strong>, selagi saya bisa maka akan kita adakan pembelajaran saat itu juga.
-          </div>
-        </details>        
-        
-        <details class="faq-item">
-          <summary>Platform belajarnya apa?</summary>
-          <div>
-            Kita pakai Zoom atau Google Meet. Saya menggunakan
-            <strong>Digital Writing Pad</strong>, jadi coretan rumus dan
-            penjelasan akan terlihat sangat jelas di layar kamu.
-          </div>
-        </details>
+            <details class="faq-item">
+              <summary>⏰ Jadwal belajarnya gimana?</summary>
+              <div>
+                Fleksibel banget. Kita cocokin jadwal kosongmu sama aku. Mau
+                sore, malem, atau weekend (Sabtu/Minggu) ayo aja, asalkan
+                slotnya masih ada ya. Jadi gak bakal ganggu kuliah reguler kamu.
+              </div>
+            </details>
 
-        <details class="faq-item">
-          <summary>Bayarnya gimana?</summary>
-          <div>
-            Pembayaran dilakukan via Transfer Bank atau E-Wallet
-            (GoPay/OVO/Dana) setelah kita sepakat soal jadwal sesi.
+            <details class="faq-item">
+              <summary>💻 Belajarnya online pakai apa?</summary>
+              <div>
+                Kita pakai <strong>Zoom</strong> atau
+                <strong>Google Meet</strong>. Tenang, aku pakai alat bantu
+                <em>Digital Writing Pad</em>, jadi coretan rumus dan
+                penjelasannya bakal kelihatan jelas di layar kamu (bukan pakai
+                mouse yang keriting tulisannya 😅).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>💰 Cara bayarnya ribet gak?</summary>
+              <div>
+                Gampang pol. Kamu bisa transfer via Bank atau E-Wallet
+                (GoPay/Dana/OVO). Pembayaran dilakukan setelah kita
+                <em>deal</em> jadwal sesinya. Aman dan praktis.
+              </div>
+            </details>
           </div>
-        </details>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 - Tutor Privat oleh Restu (KS 63). All rights reserved.</p>
+      <div class="container">
+        <p>
+          &copy; 2025 Tutor Privat Restu (KS 63).<br />Dibuat untuk membantu
+          mahasiswa STIS.
+        </p>
+      </div>
     </footer>
   </body>
 </html>
-
-
